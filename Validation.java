@@ -21,10 +21,24 @@ public class Validation {
     }
 
     public static void main(String [] args){
-        System.out.println(validatePhone("111-222-3333"));
-        System.out.println(validatePhone("111-222-3m33"));
-        System.out.println(validatePhone("111-222-333"));
-        System.out.println(validatePhone("111-22233933"));
-        System.out.println(validatePhone("1110222-3333"));
+        String t1 = "111-222-3333";
+        String t2 = "111-222-3m33";
+        String t3 = "111-222-333";
+        String t4 = "111-22233933";
+        String t5 = "1110222-3333";
+
+        System.out.println(validatePhone(t1));
+        System.out.println(validatePhone(t2));
+        System.out.println(validatePhone(t3));
+        System.out.println(validatePhone(t4));
+        System.out.println(validatePhone(t5));
+
+        String phoneRegex = "([0-9]{3}-){2}([0-9]){4}";
+
+        System.out.println(t1.matches(phoneRegex));
+        System.out.println(t2.matches(phoneRegex));
+        System.out.println(t3.matches(phoneRegex));
+        System.out.println(t4.matches(phoneRegex));
+        System.out.println(t5.matches(phoneRegex));
     }
 }
