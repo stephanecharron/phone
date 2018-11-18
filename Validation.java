@@ -22,6 +22,7 @@ public class Validation {
 
     public static void main(String [] args){
         System.out.println(validatePhone("111-222-3333"));
+        System.out.println(validatePhone("111-222-3m33"));
         System.out.println(validatePhone("111-222-333"));
         System.out.println(validatePhone("111-22233933"));
         System.out.println(validatePhone("1110222-3333"));
